@@ -1,0 +1,56 @@
+[
+  {
+    "id": "meu-desejo",
+    "titulo": "Meu Desejo",
+    "artista": "Edney Fernandes",
+    "arquivo": "assets/audios/Meu-desejo-Edney-Fernandes.mp3",
+    "youtube": null,
+    "spotify": null,
+    "destaque": true
+  },
+  {
+    "id": "tudo-que-eu-quis",
+    "titulo": "Tudo Que Eu Quis",
+    "artista": "Edney Fernandes",
+    "arquivo": "assets/audios/Tudo-que-eu-quis-Edney-Fernandes-.mp3",
+    "youtube": null,
+    "spotify": null,
+    "destaque": true
+  },
+  {
+    "id": "momentos-de-tristeza",
+    "titulo": "Momentos de Tristeza",
+    "artista": "Ed & A Tripulação",
+    "arquivo": "assets/audios/ed-tripulacao-momentos-de-tristeza.mp3",
+    "youtube": null,
+    "spotify": null,
+    "destaque": true
+  },
+  {
+    "id": "despedida",
+    "titulo": "Despedida",
+    "artista": "Edney Fernandes",
+    "arquivo": "assets/audios/Despedida-Edney-fernandes.mp3",
+    "youtube": null,
+    "spotify": null,
+    "destaque": true
+  },
+  {
+    "titulo": "Meu Desejo",
+    "colaboradores": [
+      "Edney Fernandes"
+    ],
+    "ano": 2003,
+    "isrc": "",
+    "link": ""
+  },
+  {
+    "titulo": "Teu Coração",
+    "colaboradores": [
+      "Edney Fernandes"
+    ],
+    "ano": 2003,
+    "isrc": "",
+    "link": ""
+  }
+]
