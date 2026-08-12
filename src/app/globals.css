@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-h: 78px;
+    --radius: 24px;
+    --shadow: 0 28px 90px rgba(0,0,0,.35);
+    --blur: blur(16px);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-fg font-body overflow-x-hidden;
+    background-image: radial-gradient(circle at top, rgba(201,168,76,.06), transparent 30%),
+      linear-gradient(180deg, #080808, #080808);
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+  }
+
+  a { @apply text-inherit no-underline; }
+  img { @apply block max-w-full; }
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center min-h-[48px] px-5 rounded-full
+      border border-line text-[.96rem] font-semibold
+      transition-all duration-300 cursor-pointer;
+  }
+  .btn:hover { @apply -translate-y-0.5 shadow-lg; }
+  .btn-primary { @apply bg-fg text-bg border-fg; }
+  .btn-secondary { @apply bg-white/[.03] text-fg; }
+  .btn-ghost { @apply bg-transparent text-fg; }
+  .btn-primary:hover { @apply bg-gold border-gold text-bg; }
+  .btn-secondary:hover { @apply border-gold/50 text-gold; }
+
+  /* Eyebrow */
+  .eyebrow {
+    @apply inline-block text-gold uppercase tracking-[.18em] text-[.82rem] font-extrabold mb-3;
+  }
+  .eyebrow-lg { @apply tracking-[.2em] text-[.92rem]; }
+
+  /* Section */
+  .section {
+    @apply relative py-28 border-b border-line bg-bg;
+  }
+
+  /* Gold line divider */
+  .gold-line {
+    @apply border-t border-gold/30;
+  }
+
+  /* Noise overlay */
+  .noise {
+    @apply fixed inset-0 pointer-events-none opacity-[.035] z-[1];
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,.5) .5px, transparent .6px),
+      radial-gradient(circle at 80% 30%, rgba(255,255,255,.45) .5px, transparent .6px),
+      radial-gradient(circle at 40% 80%, rgba(255,255,255,.35) .5px, transparent .6px);
+    background-size: 140px 140px, 180px 180px, 220px 220px;
+  }
+
+  /* Card */
+  .card-dark {
+    @apply border border-white/10 bg-white/[.02] rounded-[var(--radius)];
+  }
+
+  /* Interstitial phrase */
+  .interstitial {
+    @apply flex items-center justify-center py-28 px-6 text-center
+      border-b border-line bg-bg overflow-hidden;
+  }
+  .interstitial p {
+    @apply font-display text-[clamp(2.2rem,5.5vw,5rem)] font-light italic text-fg
+      leading-[1.12] max-w-[20ch] tracking-[-0.01em] relative z-10;
+  }
+
+  /* Form fields */
+  .form-field {
+    @apply flex flex-col gap-1.5 mb-4;
+  }
+  .form-field label {
+    @apply text-[.86rem] text-muted font-semibold tracking-wide;
+  }
+  .form-input {
+    @apply bg-white/[.06] border border-white/[.14] rounded-[10px] px-4 py-3
+      text-fg text-[.97rem] font-body transition-colors duration-200
+      focus:outline-none focus:border-gold;
+  }
+}
+
+/* Scrollbar */
+* { scrollbar-color: #C9A84C rgba(255,255,255,.08); scrollbar-width: thin; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
